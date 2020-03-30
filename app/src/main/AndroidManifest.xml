@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.orbitz">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Orbitz"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.example.orbitz.Navigation"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name="com.example.orbitz.Profile" />
+        <activity android:name="com.example.orbitz.MainActivityBook" />
+        <activity android:name="com.example.orbitz.CarDetails" />
+        <activity android:name="com.example.orbitz.PersonalDetails" />
+        <activity android:name="com.example.orbitz.UserProfile" />
+        <activity android:name="com.example.orbitz.confirm_car" />
+        <activity android:name="com.example.orbitz.MainActivityRate" />
+        <activity android:name="com.example.orbitz.SettingsActivity" />
+        <activity android:name="com.example.orbitz.MainActivityFeedback"/>
+        <activity android:name="com.example.orbitz.FeedbackView"/>
+        <activity android:name="com.example.orbitz.NotificationView"/>
+        <activity android:name="com.example.orbitz.MainActivity" >
+        <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.orbitz.SignUp">
+
+        </activity>
+    </application>
+
+</manifest>

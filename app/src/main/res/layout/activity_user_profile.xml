@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:textSize="30dp"
+            android:text="User Profile "
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txtid"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="ID"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColorHint="#fff" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
+
+        <EditText
+            android:id="@+id/txtname"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColorHint="#fff" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
+
+        <EditText
+            android:id="@+id/txtmail"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginTop="4dp"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="E-mail Address"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColorHint="#fff" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
+
+        <EditText
+            android:id="@+id/txtno"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginTop="4dp"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Vehical No"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColorHint="#fff" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
+
+        <EditText
+            android:id="@+id/txtmodel"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginTop="4dp"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Model"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColorHint="#fff" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
+
+        <Button
+            android:id="@+id/btnadd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_signup"
+            android:clickable="true"
+            android:padding="16dp"
+            android:text="Confirm"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnedit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_login"
+            android:text="Edit"
+            android:textColor="#ffffff"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:padding="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="100dp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:textSize="20dp"
+            android:text="Car Details"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="485dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txtman"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Manufacturer"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColorHint="#fff" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
+
+        <EditText
+            android:id="@+id/txtmod"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginTop="4dp"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Model"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColorHint="#fff" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
+
+        <EditText
+            android:id="@+id/txtreg"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginTop="4dp"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Regstation NO "
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColorHint="#fff" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db" />
+
+        <TextView
+            android:id="@+id/c_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Car Details"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btnadd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_signup"
+            android:clickable="true"
+            android:padding="16dp"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+
+        <Button
+            android:id="@+id/btntype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:onClick="showPopup"
+            android:text="User Profile" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="Agree All Condition and rules"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/btnnext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_signup"
+            android:clickable="true"
+            android:padding="16dp"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
