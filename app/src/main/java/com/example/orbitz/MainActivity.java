@@ -19,102 +19,59 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
     Button loginbtn, signupbtn;
-    EditText username, password;
+    EditText Lusername, Lpassword;
 
 
-    DatabaseReference databaseReference;
-
-
+    LoginDatabaseHelper loginDatabaseHelper;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        loginDatabaseHelper = new LoginDatabaseHelper(this);
         signupbtn = findViewById(R.id.btn_sign_up);
         loginbtn = findViewById(R.id.btn_login);
         //password = findViewById(R.id.txt_password);
-        username = findViewById(R.id.txt_name);
+        Lusername = findViewById(R.id.txt_name);
 
         //username = findViewById(R.id.txt_name);
-        password = findViewById(R.id.txtpw);
+        Lpassword = findViewById(R.id.txtpw);
         //loginbtn = findViewById(R.id.btn_login);
 
-
-
-        databaseReference = FirebaseDatabase.getInstance().getReference("Sign up");
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String pwd = null;
-                try {
-                    pwd = (password.getText().toString());
+                String username = Lusername.getText().toString();
+                String password = Lpassword.getText().toString();
 
-                } catch (Exception e) {
-                    e.printStackTrace();
+                Boolean checklogin = loginDatabaseHelper.CheckLogin(username, password);
+                if (checklogin == true) {
+                    Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(MainActivity.this, Navigation.class);
+                    startActivity(intent);
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
                 }
-                logIn(username.getText().toString(), pwd);
-
             }
-
         });
+
         signupbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intphto = new Intent(getApplicationContext(), SignUp.class);
-                startActivity(intphto);
+                Intent intent = new Intent(MainActivity.this, SignUp.class);
+
+                startActivity(intent);
+
             }
         });
-    }
-
-
-
-    private void logIn(final String userName, final String password) {
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.child(userName).exists()) {
-                    if (!userName.isEmpty()) {
-                        User user = dataSnapshot.child(userName).getValue(User.class);// assign retrived values from user to User class
-
-
-
-                        if (user.getPassword().equals(password)) {
-                            Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
-                            Intent home = new Intent(getApplicationContext(), Navigation.class);
-                            home.putExtra("userName",userName);
-                            startActivity(home);
-                            /*loginbtn.setOnClickListener(new View.OnClickListener() {
-
-                                @Override
-                                public void onClick(View v) {
-                                    startActivity(new Intent(MainActivity.this, MainActivity.class));
-                                }
-                            });*/
-
-
-
-                        } else {
-                            Toast.makeText(MainActivity.this, "Password Incorrect", Toast.LENGTH_LONG).show();
-                        }
-                    } else {
-                        Toast.makeText(MainActivity.this, "User is not register", Toast.LENGTH_LONG).show();
-                    }
-
-                } else {
-                    Toast.makeText(MainActivity.this, "User is not register", Toast.LENGTH_LONG).show();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-
-
-        });
-
     }
 }
+
+
+
+
+
