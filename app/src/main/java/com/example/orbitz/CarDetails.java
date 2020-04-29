@@ -22,25 +22,7 @@ public class CarDetails extends AppCompatActivity {
     DatabaseReference dbref;
     CarDb cardb;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_car_details);
 
-        savebt = findViewById(R.id.btnadd1);
-        typeb = findViewById(R.id.btntype);
-        nextb = findViewById(R.id.btnnext);
-        editman = findViewById(R.id.txtman);
-        editmod = findViewById(R.id.txtmod);
-        editreg = findViewById(R.id.txtreg);
-
-        cardb = new CarDb();
-
-        AddData();
-        UserProf();
-        Next();
-
-    }
 
     private void Next() {
         nextb.setOnClickListener(new View.OnClickListener() {
