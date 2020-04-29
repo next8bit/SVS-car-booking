@@ -46,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
                 String username = Lusername.getText().toString();
                 String password = Lpassword.getText().toString();
 
-                
+                Boolean checklogin = loginDatabaseHelper.CheckLogin(username, password);
+                if (checklogin == true) {
+                    Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+
                     Intent intent = new Intent(MainActivity.this, Navigation.class);
                     startActivity(intent);
 
