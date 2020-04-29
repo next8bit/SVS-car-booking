@@ -29,13 +29,7 @@ public class FeedbackView extends AppCompatActivity {
         showFeed.setText("");
     }
 
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.feedback_view);
 
-        showName = findViewById(R.id.editText1);
-        showEmail = findViewById(R.id.editText2);
-        showFeed = findViewById(R.id.editText3);
 
         btnshow = findViewById(R.id.button);
 
