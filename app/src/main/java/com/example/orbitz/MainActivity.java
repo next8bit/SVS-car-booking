@@ -25,15 +25,7 @@ public class MainActivity extends AppCompatActivity {
     LoginDatabaseHelper loginDatabaseHelper;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        loginDatabaseHelper = new LoginDatabaseHelper(this);
-        signupbtn = findViewById(R.id.btn_sign_up);
-        loginbtn = findViewById(R.id.btn_login);
-        //password = findViewById(R.id.txt_password);
-        Lusername = findViewById(R.id.txt_name);
+    
 
         //username = findViewById(R.id.txt_name);
         Lpassword = findViewById(R.id.txtpw);
