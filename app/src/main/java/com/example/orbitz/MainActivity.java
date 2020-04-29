@@ -40,10 +40,7 @@ public class MainActivity extends AppCompatActivity {
         //loginbtn = findViewById(R.id.btn_login);
 
 
-        loginbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username = Lusername.getText().toString();
+        
                 String password = Lpassword.getText().toString();
 
                 Boolean checklogin = loginDatabaseHelper.CheckLogin(username, password);
