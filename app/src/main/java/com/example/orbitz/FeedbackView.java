@@ -23,11 +23,7 @@ public class FeedbackView extends AppCompatActivity {
     DatabaseReference mRef;
 
 
-    public void clearData(){
-        showName.setText("");
-        showEmail.setText("");
-        showFeed.setText("");
-    }
+    
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
