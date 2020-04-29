@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         loginDatabaseHelper = new LoginDatabaseHelper(this);
         signupbtn = findViewById(R.id.btn_sign_up);
         loginbtn = findViewById(R.id.btn_login);
-        //password = findViewById(R.id.txt_password);
         Lusername = findViewById(R.id.txt_name);
 
         //username = findViewById(R.id.txt_name);
