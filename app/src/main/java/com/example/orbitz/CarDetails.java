@@ -17,10 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class CarDetails extends AppCompatActivity {
 
-    Button savebt,typeb,nextb;
-    EditText editman,editmod,editreg;
-    DatabaseReference dbref;
-    CarDb cardb;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
