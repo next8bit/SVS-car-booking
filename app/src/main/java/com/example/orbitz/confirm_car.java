@@ -95,23 +95,7 @@ public class confirm_car extends AppCompatActivity {
                 });
 
 
-             btnDelete.setOnClickListener(new View.OnClickListener() {
-                                              @Override
-                                              public void onClick(View view) {
-
-                                                  DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Booking");
-                                                  delRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                                                      @Override
-                                                      public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                                          if (dataSnapshot.hasChild("book1")){
-                                                              myRef = FirebaseDatabase.getInstance().getReference().child("Booking").child("book1");
-                                                              myRef.removeValue();
-                                                              clearData();
-                                                              Toast.makeText(getApplicationContext(),"You Booking is Deleted ",Toast.LENGTH_SHORT).show();
-                                                          }
-                                                          else
-                                                              Toast.makeText(getApplicationContext(),"No Source To Delete",Toast.LENGTH_SHORT).show();
-                                                      }
+             
 
                                                       @Override
                                                       public void onCancelled(@NonNull DatabaseError databaseError) {
