@@ -61,31 +61,7 @@ public class MainActivityBook extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mainbook);
-
-        EdtLocation = findViewById(R.id.enterLocation);
-
-
-           EdtBrand = findViewById(R.id.EnterBrand);
-           EdtModel = findViewById(R.id.editText3);
-           nextButton1 =(Button) findViewById(R.id.btnMain);
-           calculate = (Button) findViewById(R.id.calculate);
-           EnterDays = findViewById(R.id.EnterDays);
-           TxtAmount = findViewById(R.id.TxtAmount);
-
-           bookingDB = new BookingDB();
-
-      //init();
-
-        mTimeTextView =  findViewById(R.id.time_text_view) ;
-        Calendar calendar = Calendar.getInstance();
-        final  int hour = calendar.get(Calendar.HOUR_OF_DAY);
-        final  int minute = calendar.get(Calendar.MINUTE);
-        mPickTimeButton = findViewById(R.id.pick_time_button) ;
-
+   
         mPickTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
