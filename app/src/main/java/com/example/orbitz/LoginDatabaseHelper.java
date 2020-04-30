@@ -20,23 +20,7 @@ public class LoginDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE user(ID INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT)");
     }
 
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXIST user");
-    }
-
-    public boolean Insert(String username, String password){
-        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("username", username);
-        contentValues.put("password", password);
-        long result = sqLiteDatabase.insert("user", null, contentValues);
-        if(result == -1){
-            return false;
-        }else{
-            return true;
-        }
-    }
+    
 
     public Boolean CheckUsername(String username){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
