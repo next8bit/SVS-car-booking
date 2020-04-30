@@ -29,12 +29,7 @@ public class SignUp extends AppCompatActivity {
 //    databaseHelper helper = new databaseHelper(this);
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
-        loginDatabaseHelper = new LoginDatabaseHelper(this);
-        signupbtn = findViewById(R.id.btn_sign_up2);
+    
         txtUN = findViewById(R.id.txt_first_name);
         txtEmail = findViewById(R.id.txt_email);
         txtPass = findViewById(R.id.txt_pass);
