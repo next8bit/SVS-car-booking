@@ -22,15 +22,6 @@ public class confirm_car extends AppCompatActivity {
     DatabaseReference myRef;
     BookingDB bookingDB;
 
-    public void clearData(){
-
-        showBrand.setText("");
-        showModel.setText("");
-        showTime.setText("");
-        showDate.setText("");
-        showLocation.setText("");
-        showAmount.setText("");
-
 
 
     }
