@@ -31,7 +31,5 @@ public class FeedbackDB {
         return feed;
     }
 
-    public void setFeed(String feed) {
-        this.feed = feed;
-    }
+  
 }
