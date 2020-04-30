@@ -38,13 +38,7 @@ public class LoginDatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public Boolean CheckUsername(String username){
-        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM user WHERE username=?", new String[]{username});
-        if(cursor.getCount() > 0){
-            return false;
-        }else{
-            return true;
+    
         }
     }
 
