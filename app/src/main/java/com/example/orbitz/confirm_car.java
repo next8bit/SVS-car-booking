@@ -72,7 +72,16 @@ public class confirm_car extends AppCompatActivity {
                         readRef.addListenerForSingleValueEvent(new ValueEventListener() {
 
                             @Override
-                           
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                if(dataSnapshot.hasChildren()){
+                                    showLocation.setText(dataSnapshot.child("location").getValue().toString());
+                                    showDate.setText(dataSnapshot.child("date").getValue().toString());
+                                    showTime.setText(dataSnapshot.child("time").getValue().toString());
+                                    showBrand.setText(dataSnapshot.child("brand").getValue().toString());
+                                    showModel.setText(dataSnapshot.child("model").getValue().toString());
+                                    showAmount.setText(dataSnapshot.child("amount").getValue().toString());
+
+                                }
                                 else
                                     Toast.makeText(getApplicationContext(),"No Source to display",Toast.LENGTH_LONG).show();
                             }
