@@ -74,7 +74,7 @@ public class FeedbackView extends AppCompatActivity {
                 DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("FeedbackDB");
                 delRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
-                   
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if (dataSnapshot.hasChild("feed1")){
                             mRef = FirebaseDatabase.getInstance().getReference().child("FeedbackDB").child("feed1");
                             mRef.removeValue();
