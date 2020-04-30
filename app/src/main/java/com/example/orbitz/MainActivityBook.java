@@ -44,7 +44,23 @@ public class MainActivityBook extends AppCompatActivity {
     EditText EnterDays;
 
 
- 
+    private DatePickerDialog.OnDateSetListener mDateSetListener;
+
+
+    public void clearData(){
+
+        EdtLocation.setText("");
+        EdtModel.setText("");
+        EdtBrand.setText("");
+        mDisplayDate.setText("");
+        mTimeTextView.setText("");
+        TxtAmount.setText("");
+        EnterDays.setText("");
+
+
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
