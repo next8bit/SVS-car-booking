@@ -86,29 +86,7 @@ public class MainActivityBook extends AppCompatActivity {
         final  int minute = calendar.get(Calendar.MINUTE);
         mPickTimeButton = findViewById(R.id.pick_time_button) ;
 
-        mPickTimeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                TimePickerDialog timePickerDialog = new TimePickerDialog(mContext, new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker View, int hourOfDay, int minute) {
-                        mTimeTextView.setText(hourOfDay + ":" + minute );
-                    }
-                },hour,minute,android.text.format.DateFormat.is24HourFormat(mContext));
-                timePickerDialog.show();
-            }
-        });
-
-
-        nextButton1 = findViewById(R.id.btnMain);
-        nextButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(TextUtils.isEmpty(EdtLocation.getText().toString())|| TextUtils.isEmpty(EdtBrand.getText().toString()) || TextUtils.isEmpty(EdtModel.getText().toString()))
-                {
-                    Toast.makeText(getApplicationContext(),"Please Fill All the fields",Toast.LENGTH_SHORT).show();
-                }
+       
 
                 else {
 
