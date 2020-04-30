@@ -2,16 +2,7 @@ package com.example.orbitz;
 
 import java.lang.reflect.Constructor;
 
-public class BookingDB {
-    private  String location;
-    private  String date ;
-    private  String time;
-    private  String brand;
-    private  String model;
-    private  int days;
-    private int amount;
 
-    public BookingDB() {
 
     }
 
