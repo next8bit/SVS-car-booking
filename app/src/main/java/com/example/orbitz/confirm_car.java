@@ -124,28 +124,6 @@ public class confirm_car extends AppCompatActivity {
 
 
 
-            btnConfirm.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    DatabaseReference conRef = FirebaseDatabase.getInstance().getReference().child("Booking").child("book1");
-                    conRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            if (dataSnapshot.hasChildren()) {
-
-                                Toast.makeText(getApplicationContext(), "Booking confirmed...", Toast.LENGTH_SHORT).show();
-                                clearData();
-                            } else
-                                Toast.makeText(getApplicationContext(), "No Source To confirm", Toast.LENGTH_SHORT).show();
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                        }
-                    });
-                }
-            });
 
     }
 
