@@ -52,7 +52,16 @@ public class CarDetails extends AppCompatActivity {
         });
     }
 
-   
+    private void UserProf() {
+        typeb.setOnClickListener(new View.OnClickListener() {
+            /*Intent intent = new Intent(this,PersonalDetails.class);
+            startActivity(intent);*/
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CarDetails.this, UserProfile.class));
+            }
+        });
+    }
 
     public void AddData(){
         savebt.setOnClickListener(new View.OnClickListener() {
