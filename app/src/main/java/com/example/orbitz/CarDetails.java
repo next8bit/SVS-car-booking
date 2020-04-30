@@ -78,7 +78,29 @@ public class CarDetails extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Please a registration no", Toast.LENGTH_LONG).show();
 
 
-            
+            else {
+
+                cardb.setManu(editman.getText().toString().trim());
+
+                cardb.setModel(editmod.getText().toString().trim());
+
+                cardb.setRegNo(editreg.getText().toString().trim());
+
+
+                dbref.push().setValue(cardb);
+
+                dbref.child("cardb1").setValue(cardb);
+
+                Toast.makeText(getApplicationContext(), "Saved Successfully", Toast.LENGTH_LONG).show();
+
+
+                editman.setText(null);
+
+                editmod.setText(null);
+
+                editreg.setText(null);
+            }
+
 
 
 
