@@ -13,9 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DatabaseReference;
 
-public class SignUp extends AppCompatActivity {
 
-    Button signupbtn,btnBack;
     EditText txtUN,txtEmail,txtPass,txtConPass;
     CheckBox terms;
     TextView usernameLbl,usernameLbl2;
