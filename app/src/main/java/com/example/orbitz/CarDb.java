@@ -1,10 +1,5 @@
 package com.example.orbitz;
 
-public class CarDb {
-
-    private String manu;
-    private String model;
-    private String regNo;
 
     public CarDb() {
     }
