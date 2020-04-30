@@ -23,9 +23,7 @@ public class FeedbackDB {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+ 
 
     public String getFeed() {
         return feed;
