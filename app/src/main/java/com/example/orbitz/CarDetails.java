@@ -42,7 +42,15 @@ public class CarDetails extends AppCompatActivity {
 
     }
 
-   
+    private void Next() {
+        nextb.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CarDetails.this, PersonalDetails.class));
+            }
+        });
+    }
 
     private void UserProf() {
         typeb.setOnClickListener(new View.OnClickListener() {
