@@ -20,7 +20,7 @@ public class SignUp extends AppCompatActivity {
     CheckBox terms;
     TextView usernameLbl,usernameLbl2;
 
-    
+    LoginDatabaseHelper loginDatabaseHelper;
 
 
 
