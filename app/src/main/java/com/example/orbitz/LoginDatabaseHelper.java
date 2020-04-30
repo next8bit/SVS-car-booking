@@ -48,4 +48,13 @@ public class LoginDatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    
+    public Boolean CheckLogin(String username, String password){
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM user WHERE username=? AND password=?", new String[]{username, password});
+        if(cursor.getCount() > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
