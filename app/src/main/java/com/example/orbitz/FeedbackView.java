@@ -78,7 +78,8 @@ public class FeedbackView extends AppCompatActivity {
                         if (dataSnapshot.hasChild("feed1")){
                             mRef = FirebaseDatabase.getInstance().getReference().child("FeedbackDB").child("feed1");
                             mRef.removeValue();
-                            
+                            clearData();
+
                             Toast.makeText(getApplicationContext(),"Your FeedbackDB is deleted",Toast.LENGTH_SHORT).show();
                         }
                         else {
