@@ -25,6 +25,26 @@ import java.util.Calendar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+public class MainActivityBook extends AppCompatActivity {
+
+    Button nextButton1;
+    Button calculate;
+
+    private static final String TAG = "MainActivityBook";
+    private TextView mDisplayDate;
+    private  EditText EdtLocation,EdtBrand,EdtModel;
+
+    TextView TxtAmount;
+    TextView mTimeTextView;
+
+    Button mPickTimeButton;
+    Context mContext = this;
+    DatabaseReference myRef;
+    BookingDB bookingDB;
+    EditText EnterDays;
+
+
+    private DatePickerDialog.OnDateSetListener mDateSetListener;
 
 
     public void clearData(){
