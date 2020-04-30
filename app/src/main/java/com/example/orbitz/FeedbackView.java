@@ -70,7 +70,8 @@ public class FeedbackView extends AppCompatActivity {
 
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
-            
+            public void onClick(View view) {
+                DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("FeedbackDB");
                 delRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
