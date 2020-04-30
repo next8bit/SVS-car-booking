@@ -112,6 +112,72 @@ public class MainActivityBook extends AppCompatActivity {
 
                 else {
 
+                    Log.d("nav", "test");
+                    Intent intent1 = new Intent(MainActivityBook.this, confirm_car.class);
+                    startActivity(intent1);
+
+                    myRef = FirebaseDatabase.getInstance().getReference().child("Booking");
+
+                    bookingDB.setLocation(EdtLocation.getText().toString().trim());
+                    bookingDB.setDate(mDisplayDate.getText().toString().trim());
+                    bookingDB.setTime(mTimeTextView.getText().toString().trim());
+                    bookingDB.setBrand(EdtBrand.getText().toString().trim());
+                    bookingDB.setModel(EdtModel.getText().toString().trim());
+                    bookingDB.setDays(Integer.parseInt(EnterDays.getText().toString().trim()));
+                    bookingDB.setAmount(Integer.parseInt(TxtAmount.getText().toString().trim()));
+
+
+                    myRef.child("book1").setValue(bookingDB);
+
+                    Toast.makeText(getApplicationContext(), "Booking Success", Toast.LENGTH_LONG).show();
+                    clearData();
+
+//                switch (view.getId()){}https://github.com/thivi97/Orbitz.githttps://github.com/thivi97/Orbitz.githttps://github.com/thivi97/Orbitz.git
+                }}
+            });
+
+        mDisplayDate = (TextView) findViewById(R.id.tvDate);
+
+        mDisplayDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(
+                        MainActivityBook.this,
+                        android.R.style.Theme_Holo_Dialog_MinWidth,
+                        mDateSetListener,
+                        year,month,day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+
+            }
+        });
+        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                month = month + 1;
+                Log.d(TAG, "onDateSet: mm/dd/yyy:" + month + "/" + day + "/" + year);
+                String date = month + "/" + day + "/" + year;
+                mDisplayDate.setText(date);
+            }
+        };
+
+
+        calculate = (Button) findViewById(R.id.calculate);
+
+        calculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Integer  Day = Integer.parseInt(EnterDays.getText().toString());
+                Integer  cal =  Day * 500;
+
+                TxtAmount.setText(Integer.toString(cal));
+
             }
         });
 
