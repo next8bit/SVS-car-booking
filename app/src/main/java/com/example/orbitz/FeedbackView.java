@@ -80,7 +80,7 @@ public class FeedbackView extends AppCompatActivity {
                             mRef.removeValue();
                             clearData();
 
-                            Toast.makeText(getApplicationContext(),"Your FeedbackDB is deleted",Toast.LENGTH_SHORT).show();
+                            
                         }
                         else {
                             Toast.makeText(getApplicationContext(),"No source to Delete",Toast.LENGTH_SHORT).show();
