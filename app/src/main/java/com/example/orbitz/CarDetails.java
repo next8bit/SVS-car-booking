@@ -20,7 +20,7 @@ public class CarDetails extends AppCompatActivity {
     Button savebt,typeb,nextb;
     EditText editman,editmod,editreg;
     DatabaseReference dbref;
-    CarDb cardb;
+    CarDb car
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
